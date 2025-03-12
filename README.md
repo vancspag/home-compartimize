@@ -41,12 +41,12 @@ Nenhum pré-requisito especial é necessário para executar este projeto, pois e
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/troca-sustentavel.git
+   git clone https://github.com/seu-usuario/home-compartimize.git
    ```
 
 2. Navegue até o diretório do projeto:
    ```bash
-   cd troca-sustentavel
+   cd home-compartimize
    ```
 
 3. Abra o arquivo index.html em seu navegador preferido.
@@ -58,7 +58,7 @@ O site é otimizado para implantação no GitHub Pages:
 1. Fork este repositório
 2. Vá para as configurações do seu repositório
 3. Na seção "GitHub Pages", selecione a branch principal como fonte
-4. O site será publicado em `https://seu-usuario.github.io/troca-sustentavel/`
+4. O site será publicado em `https://seu-usuario.github.io/home-compartimize/`
 
 ## (￣_,￣ ) Estrutura do Projeto
 
@@ -108,7 +108,7 @@ Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para de
 
 Link do Projeto: [https://github.com/vancspag/home-compartimize](https://github.com/vancspag/home-compartimize)
 
-## 🙏 Agradecimentos
+## ;D Agradecimentos
 
 - Agradeço a todos que acreditam e contribuem para a economia compartilhada
 - Inspirado pelas iniciativas de sustentabilidade e consumo consciente

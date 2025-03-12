@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca Sustentável | Compartilhe e Economize</title>
+    <style>
+        /* Reset e Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Padrão de fundo */
+        .pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: 
+                radial-gradient(circle, #fff 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Navegação */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            list-style: none;
+        }
+
+        nav li {
+            margin: 0 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #000;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #000;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Botões */
+        .btn {
+            display: inline-block;
+            background-color: #222;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid #222;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: #222;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #222;
+            border: 2px solid #222;
+        }
+
+        .btn-outline:hover {
+            background-color: #222;
+            color: white;
+        }
+
+        /* Seções */
+        section {
+            padding: 4rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+
+        /* Como Funciona */
+        .como-funciona {
+            background-color: white;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #f5f5f5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        .step h3 {
+            margin-bottom: 1rem;
+        }
+
+        /* Benefícios */
+        .beneficios {
+            background-color: #f9f9f9;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Itens Populares */
+        .itens-populares {
+            background-color: white;
+        }
+
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .item {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item-image {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #ccc;
+        }
+
+        .item-info {
+            padding: 1.5rem;
+        }
+
+        .item-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .item-category {
+            display: inline-block;
+            background-color: #f0f0f0;
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Depoimentos */
+        .depoimentos {
+            background-color: #f9f9f9;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 4rem;
+            opacity: 0.1;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-content {
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #eee;
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #aaa;
+        }
+
+        /* Cadastro */
+        .cadastro {
+            background-color: white;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo {
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin: 0 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .social-link:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        .copyright {
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="pattern"></div>
+        <div class="header-content">
+            <h1>Troca Sustentável</h1>
+            <p>Compartilhe recursos, conecte-se com vizinhos e construa uma comunidade mais sustentável e econômica.</p>
+            <a href="#cadastro" class="btn">Participe Agora</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#como-funciona">Como Funciona</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#itens-populares">Itens Populares</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#cadastro">Cadastre-se</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="como-funciona" class="como-funciona">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Como Funciona</h2>
+                    <p>Compartilhar nunca foi tão fácil. Siga estes passos simples e comece a economizar enquanto ajuda a comunidade.</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-icon">1</div>
+                        <h3>Cadastre-se</h3>
+                        <p>Crie uma conta gratuitamente e faça parte da nossa comunidade de compartilhamento.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2</div>
+                        <h3>Publique Itens</h3>
+                        <p>Adicione os itens que você gostaria de compartilhar com seus vizinhos.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3</div>
+                        <h3>Conecte-se</h3>
+                        <p>Entre em contato com outros membros e organize a troca ou empréstimo de itens.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="beneficios">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Benefícios</h2>
+                    <p>Descubra como nossa plataforma pode transformar sua comunidade e gerar economia real.</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit">
+                        <div class="benefit-icon">💰</div>
+                        <h3>Economize Dinheiro</h3>
+                        <p>Por que comprar algo que você usará poucas vezes? Economize alugando ou pegando emprestado de vizinhos.</p>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">🌱</div>
+                        <h3>Sustentabilidade</h3>
+                        <p>Reduza o consumo desnecessário e ajude a diminuir o impacto ambiental da produção de novos itens.</p>
+                    </div>
+                    <div class="benefit">
+                        <div class="benefit-icon">👥</div>
+                        <h3>Conexão Comunitária</h3>
+                        <p>Conheça seus vizinhos e fortaleça os laços comunitários através do compartilhamento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="itens-populares" class="itens-populares">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Itens Populares</h2>
+                    <p>Veja alguns dos itens mais compartilhados em nossa plataforma.</p>
+                </div>
+                <div class="items-grid">
+                    <div class="item">
+                        <div class="item-image">🛠️</div>
+                        <div class="item-info">
+                            <span class="item-category">Ferramentas</span>
+                            <h3>Furadeira Elétrica</h3>
+                            <p>Furadeira em ótimo estado, perfeita para pequenos reparos domésticos.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-image">📚</div>
+                        <div class="item-info">
+                            <span class="item-category">Livros</span>
+                            <h3>Coleção Harry Potter</h3>
+                            <p>Coleção completa dos livros Harry Potter em português, em bom estado.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-image">🎮</div>
+                        <div class="item-info">
+                            <span class="item-category">Jogos</span>
+                            <h3>Nintendo Switch</h3>
+                            <p>Console disponível para empréstimo com dois controles e três jogos.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-image">🚲</div>
+                        <div class="item-info">
+                            <span class="item-category">Esportes</span>
+                            <h3>Bicicleta Mountain Bike</h3>
+                            <p>Bicicleta disponível para empréstimo nos finais de semana.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="depoimentos" class="depoimentos">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Depoimentos</h2>
+                    <p>Veja o que dizem os usuários que já fazem parte da nossa comunidade.</p>
+                </div>
+                <div class="testimonials">
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>Economizei mais de R$ 2.000 em ferramentas que só precisei usar uma ou duas vezes. Além disso, conheci vizinhos incríveis!</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MC</div>
+                            <div>
+                                <strong>Marcos Castro</strong>
+                                <p>São Paulo, SP</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>Empresto meus livros e pego outros emprestados. É uma forma incrível de conhecer novas histórias sem gastar muito.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JS</div>
+                            <div>
+                                <strong>Juliana Silva</strong>
+                                <p>Rio de Janeiro, RJ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <p>Meu apartamento é pequeno e não tenho espaço para guardar tudo. Com a plataforma, tenho acesso a várias coisas sem precisar comprar.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RT</div>
+                            <div>
+                                <strong>Rafael Torres</strong>
+                                <p>Belo Horizonte, MG</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cadastro" class="cadastro">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Participe da Comunidade</h2>
+                    <p>Preencha o formulário abaixo para receber um convite e começar a compartilhar e economizar.</p>
+                </div>
+                <div class="form-container">
+                    <form id="signup-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="neighborhood">Bairro</label>
+                            <input type="text" id="neighborhood" name="neighborhood" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">Cidade</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interests">O que você gostaria de compartilhar ou pegar emprestado?</label>
+                            <textarea id="interests" name="interests"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Cadastro</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Troca Sustentável</div>
+                <div class="footer-links">
+                    <a href="#">Sobre Nós</a>
+                    <a href="#">Como Funciona</a>
+                    <a href="#">Regras da Comunidade</a>
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Contato</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link">FB</a>
+                    <a href="#" class="social-link">IG</a>
+                    <a href="#" class="social-link">TW</a>
+                    <a href="#" class="social-link">YT</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 Troca Sustentável. Todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling para navegação
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mostrar mensagem após envio do formulário
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Aqui você pode integrar com seu formulário real
+            // Por exemplo, usando fetch para enviar os dados para um endpoint
+            
+            // Simular envio bem-sucedido
+            const formContainer = document.querySelector('.form-container');
+            formContainer.innerHTML = `
+                <div style="text-align: center; padding: 2rem;">
+                    <h3 style="margin-bottom: 1rem;">Obrigado por se cadastrar!</h3>
+                    <p>Enviaremos um e-mail com as instruções para acessar nossa plataforma.</p>
+                    <div style="margin-top: 2rem;">
+                        <a href="#" class="btn btn-outline" onclick="window.location.reload()">Voltar ao Início</a>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

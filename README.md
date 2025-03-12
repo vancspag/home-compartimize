@@ -106,7 +106,7 @@ Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para de
 
 [Vanessa Pagano] - [vanessacastropag@proton.me]
 
-Link do Projeto: [https://github.com/vancspag/home-compartimize](https://github.com/vancspag/home-compartimize)
+Link do Projeto: [https://vancspag.github.io/home-compartimize/](https://vancspag.github.io/home-compartimize/)
 
 ## ;D Agradecimentos
 

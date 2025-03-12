@@ -102,7 +102,7 @@ O código foi desenvolvido para ser facilmente personalizável:
 
 Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para detalhes.
 
-## （￣︶￣）↗　 Contato
+## （￣︶￣）Contato
 
 [Vanessa Pagano] - [vanessacastropag@proton.me]
 

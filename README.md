@@ -41,7 +41,7 @@ Nenhum pré-requisito especial é necessário para executar este projeto, pois e
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/home-compartimize.git
+   git clone https://github.com/vancspag/home-compartimize.git
    ```
 
 2. Navegue até o diretório do projeto:
@@ -58,7 +58,7 @@ O site é otimizado para implantação no GitHub Pages:
 1. Fork este repositório
 2. Vá para as configurações do seu repositório
 3. Na seção "GitHub Pages", selecione a branch principal como fonte
-4. O site será publicado em `https://seu-usuario.github.io/home-compartimize/`
+4. O site será publicado em `https://vancspag.github.io/home-compartimize/`
 
 ## (￣_,￣ ) Estrutura do Projeto
 
@@ -104,7 +104,7 @@ Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE para de
 
 ## （￣︶￣）↗　 Contato
 
-[Vanessa Pagano] - [vcpagano@protonmail.com]
+[Vanessa Pagano] - [vanessacastropag@proton.me]
 
 Link do Projeto: [https://github.com/vancspag/home-compartimize](https://github.com/vancspag/home-compartimize)
 

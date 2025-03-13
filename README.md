@@ -58,7 +58,7 @@ O site é otimizado para implantação no GitHub Pages:
 1. Fork este repositório
 2. Vá para as configurações do seu repositório
 3. Na seção "GitHub Pages", selecione a branch principal como fonte
-4. O site será publicado em `https://vancspag.github.io/home-compartimize/`
+4. O site será publicado em `https://seu-usuario.github.io/home-compartimize/`
 
 # (￣_,￣ ) Estrutura do Projeto
 

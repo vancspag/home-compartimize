@@ -85,7 +85,7 @@ O código foi desenvolvido para ser facilmente personalizável:
    <form id="signup-form" action="https://seu-servico-de-formulario.com/handler" method="post">
    ```
 ### P.S:
-Uma sugestão para criar o Formulário para seu site é por meio do FORMSUBMIT. É um serviço gratuito. O próprio site fornece as instruções de como utilizar.
+Uma sugestão para implantar o Formulário em seu site é por meio do FORMSUBMIT. É um serviço gratuito. O próprio site fornece as instruções de como utilizar.
 
 https://formsubmit.co/
 

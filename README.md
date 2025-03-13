@@ -120,4 +120,4 @@ Link do Projeto: [https://vancspag.github.io/home-compartimize/](https://vancspa
 
 ---
 
-Desenvolvido com ❤️ por [Vanessa Pagano]( https://github.com/vancspag) como parte do movimento para comunidades mais sustentáveis e conectadas.
+Desenvolvido de ❤️ por [Vanessa Pagano]( https://github.com/vancspag) como parte do movimento para comunidades mais sustentáveis e conectadas.

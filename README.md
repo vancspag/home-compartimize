@@ -2,7 +2,7 @@
 
 ## Troca Sustentável
 
-# (❁´◡`❁) Sobre o Projeto
+## (❁´◡`❁) Sobre o Projeto
 
 **COMPARTIMIZE** é uma plataforma web comunitária que permite aos vizinhos compartilharem recursos, ferramentas, livros e outros itens entre si. Este projeto promove:
 
